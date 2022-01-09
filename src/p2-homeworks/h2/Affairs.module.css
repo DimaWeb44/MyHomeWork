@@ -1,0 +1,38 @@
+.someClass {
+
+}
+.buttonDelete {
+    background-color: #b04545;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.all {
+    background-color: #b69999;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.high{
+    background-color: #ec5858;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.middle{
+    background-color: #eaea6a;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.low{
+    background-color: #9cc568;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.tasks{
+}

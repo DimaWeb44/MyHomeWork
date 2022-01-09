@@ -1,0 +1,45 @@
+.message {
+    display: flex;
+    align-items: end;
+    margin: 10px;
+
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.content {
+    background-color: #afc7b9;
+    border-radius: 5px 5px 5px 0px;
+    padding: 10px;
+}
+
+.corner{
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, #afc7b9 0) ;
+}
+
+.message_name {
+    color: #547c9b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.message_text {
+    min-width: 150px;
+    max-width: 300px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.message_time {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.7rem;
+    color: #797979;
+}
