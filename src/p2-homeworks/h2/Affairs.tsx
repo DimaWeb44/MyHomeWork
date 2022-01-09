@@ -1,6 +1,6 @@
-import React, {Dispatch, SetStateAction} from 'react'
+import React from 'react'
 import Affair from './Affair'
-import {AffairType, FilterType} from './HW2'
+import {AffairType} from './HW2'
 import s from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
@@ -26,14 +26,14 @@ function Affairs(props: AffairsPropsType) {
     const setLow = () => props.setFilter("low")
 
     return (
-        <div>
-
+        <div className={s.someClass}>
             {mappedAffairs}
-
-            <button onClick={setAll} className={s.all}>All</button>
-            <button onClick={setHigh} className={s.high}>High</button>
-            <button onClick={setMiddle} className={s.middle}>Middle</button>
-            <button onClick={setLow} className={s.low}>Low</button>
+            <div className={s.buttons}>
+                <button onClick={setAll} className={s.all}>All</button>
+                <button onClick={setHigh} className={s.high}>High</button>
+                <button onClick={setMiddle} className={s.middle}>Middle</button>
+                <button onClick={setLow} className={s.low}>Low</button>
+            </div>
         </div>
     )
 }

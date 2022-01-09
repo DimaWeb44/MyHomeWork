@@ -1,38 +1,62 @@
 .someClass {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    background-color: #afc7b9;
 
-}
-.buttonDelete {
-    background-color: #b04545;
-    cursor: pointer;
-    border-radius: 5px;
 }
 
 .all {
     background-color: #b69999;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 20px;
     border-radius: 5px;
 }
 
-.high{
+.high {
     background-color: #ec5858;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 
-.middle{
+.middle {
     background-color: #eaea6a;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 
-.low{
+.low {
     background-color: #9cc568;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 10px;
     border-radius: 5px;
 }
-.tasks{
+
+.buttons {
+
+}
+
+.box {
+    display: flex;
+}
+
+.buttonsDel {
+    justify-content: space-around;
+
+}
+
+.buttonDelete {
+    background-color: #b04545;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+
+.tasks {
+
+
 }
