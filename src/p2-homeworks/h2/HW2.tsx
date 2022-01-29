@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import {Container, Grid, Paper} from "@mui/material";
 
 // types
 export type AffairPriorityType = 'high' | 'low' | 'middle'// need to fix any
@@ -39,13 +40,19 @@ function HW2() {
         <div>
             <hr/>
             homeworks 2
-
-            {/*should work (должно работать)*/}
-            <Affairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
-            />
+            <Container fixed>
+                <Grid item xs zeroMinWidth style={{padding: '10px'}}>
+                    <Paper elevation={6} style={{padding: '10px'}}>
+                        {/*should work (должно работать)*/}
+                        <Affairs
+                            data={filteredAffairs}
+                            setFilter={setFilter}
+                            deleteAffairCallback={deleteAffairCallback}
+                            filter={filter}
+                        />
+                    </Paper>
+                </Grid>
+            </Container>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}

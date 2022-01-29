@@ -1,18 +1,18 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairType} from './HW2'
-import s from './Affairs.module.css'
+import {AffairType, FilterType} from './HW2'
+import {Button, Grid} from "@mui/material";
 
 type AffairsPropsType = { // need to fix any
     data: AffairType[]
-    setFilter: any
+    setFilter: (filter: FilterType) => void
     deleteAffairCallback: (id: number) => void
-
-
+    filter: FilterType
 }
 
+
 function Affairs(props: AffairsPropsType) {
-    const mappedAffairs = props.data.map((a: any) => (
+    const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair // should work
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
@@ -26,15 +26,20 @@ function Affairs(props: AffairsPropsType) {
     const setLow = () => props.setFilter("low")
 
     return (
-        <div className={s.someClass}>
-            {mappedAffairs}
-            <div className={s.buttons}>
-                <button onClick={setAll} className={s.all}>All</button>
-                <button onClick={setHigh} className={s.high}>High</button>
-                <button onClick={setMiddle} className={s.middle}>Middle</button>
-                <button onClick={setLow} className={s.low}>Low</button>
-            </div>
-        </div>
+        <Grid>
+            <Grid spacing={3}> {mappedAffairs} </Grid>
+            <Grid spacing={4}>
+                <Button color={"inherit"} variant={props.filter === "all" ? "contained" : "outlined"}
+                        onClick={setAll}>All</Button>
+                <Button variant={props.filter === "high" ? "contained" : "outlined"} color={"primary"}
+                        onClick={setHigh}>High</Button>
+                <Button variant={props.filter === "middle" ? "contained" : "outlined"} color={"secondary"}
+                        onClick={setMiddle}>Middle</Button>
+                <Button variant={props.filter === "low" ? "contained" : "outlined"} color={"success"}
+                        onClick={setLow}>Low</Button>
+            </Grid>
+        </Grid>
+
     )
 }
 
