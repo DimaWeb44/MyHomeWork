@@ -40,9 +40,9 @@ function HW2() {
         <div>
             <hr/>
             homeworks 2
-            <Container fixed>
-                <Grid item xs zeroMinWidth style={{padding: '10px'}}>
-                    <Paper elevation={6} style={{padding: '10px'}}>
+            <Container>
+                <Grid container spacing={2} style={{padding: '25px'}}>
+                    <Paper elevation={6} style={{padding: '15px'}}>
                         {/*should work (должно работать)*/}
                         <Affairs
                             data={filteredAffairs}
@@ -53,7 +53,6 @@ function HW2() {
                     </Paper>
                 </Grid>
             </Container>
-
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
