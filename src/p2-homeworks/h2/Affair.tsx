@@ -1,5 +1,4 @@
 import React from 'react'
-import s from './Affairs.module.css'
 import {AffairType} from "./HW2";
 import {Grid, IconButton} from "@mui/material";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
