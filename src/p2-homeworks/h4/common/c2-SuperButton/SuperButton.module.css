@@ -1,7 +1,40 @@
 .default {
+    margin-top: 10px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 6px;
+    background: rgb(108, 108, 108);
+    box-shadow: 0 -3px rgb(80, 80, 80) inset;
+    transition: 0.2s;
+}
 
+.default:hover {
+    background: rgb(80, 80, 80);
+}
+
+.default:active {
+    background: rgb(44, 44, 44);
+    box-shadow: 0 3px rgb(37, 37, 37) inset;
 }
 
 .red {
-    background: red;
+    font-weight: 700;
+    margin-top: 10px;
+    background: #e03232;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 6px;
+    box-shadow: 0 -3px rgb(196, 61, 61) inset;
+    transition: 0.2s;
+}
+
+.red:hover {
+    background: rgb(196, 61, 61);
+}
+
+.red:active {
+    background: rgb(168, 59, 59);
+    box-shadow: 0 3px rgb(168, 59, 59) inset;
 }
