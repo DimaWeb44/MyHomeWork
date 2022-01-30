@@ -1,15 +1,15 @@
-import React from 'react'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
 import {Container, Grid, IconButton, TextField} from "@mui/material";
 import {ControlPoint} from "@mui/icons-material";
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
-    onKeyPress: any
-    onBlur: any
+    name: string // need to fix any
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
+    addUser: () => void // need to fix any
+    error: string | null // need to fix any
+    totalUsers: number // need to fix any
+    onKeyPress: (e: KeyboardEvent<HTMLInputElement>) => void
+    onBlur: () => void
 }
 
 // презентационная компонента (для верстальщика)
