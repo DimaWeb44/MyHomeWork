@@ -45,6 +45,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     return (
         <>
             <TextField
+                value ={{...restProps}.value}
                 variant="filled"
                 label={'Type value'}
                 helperText={error}

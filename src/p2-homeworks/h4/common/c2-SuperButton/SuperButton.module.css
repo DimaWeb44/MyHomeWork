@@ -1,13 +1,19 @@
 .default {
+    display: inline-block;
+    background-color: #797979;
     margin-top: 10px;
-    font-weight: 700;
-    color: white;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 600;
+    color: #f8f8f8;
+    text-transform: uppercase;
     text-decoration: none;
-    padding: .8em 1em calc(.8em + 3px);
-    border-radius: 6px;
-    background: rgb(108, 108, 108);
-    box-shadow: 0 -3px rgb(80, 80, 80) inset;
-    transition: 0.2s;
+    text-align: center;
+    padding: 14px 40px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.1s linear;
 }
 
 .default:hover {
@@ -16,25 +22,31 @@
 
 .default:active {
     background: rgb(44, 44, 44);
-    box-shadow: 0 3px rgb(37, 37, 37) inset;
 }
 
 .red {
-    font-weight: 700;
+    display: inline-block;
     margin-top: 10px;
-    background: #e03232;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 600;
+    color: #f12d2d;
+    background-color: #d9d9d9;
+    text-transform: uppercase;
     text-decoration: none;
-    padding: .8em 1em calc(.8em + 3px);
-    border-radius: 6px;
-    box-shadow: 0 -3px rgb(196, 61, 61) inset;
-    transition: 0.2s;
+    text-align: center;
+    padding: 14px 40px;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.1s linear;
 }
 
 .red:hover {
-    background: rgb(196, 61, 61);
+    background-color: #B83838;
+    color: #ececec;
 }
 
 .red:active {
     background: rgb(168, 59, 59);
-    box-shadow: 0 3px rgb(168, 59, 59) inset;
 }
