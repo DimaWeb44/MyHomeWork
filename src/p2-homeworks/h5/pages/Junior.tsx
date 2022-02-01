@@ -1,9 +1,10 @@
 import React from 'react'
+import Error404 from "./Error404";
 
 function Junior() {
     return (
         <div>
-            Junior
+            <Error404/>
         </div>
     )
 }
