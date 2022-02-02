@@ -1,7 +1,7 @@
 .default {
     display: inline-block;
     background-color: #797979;
-    margin-top: 10px;
+    margin: 10px;
     vertical-align: top;
     font-size: 13px;
     font-weight: 600;
@@ -21,7 +21,7 @@
 }
 
 .default:active {
-    background: rgb(44, 44, 44);
+    background: rgb(63, 63, 63);
 }
 
 .red {
