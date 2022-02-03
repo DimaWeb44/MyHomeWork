@@ -1,0 +1,18 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.active {
+    background-color: #d00000;
+}
+
+.active:hover {
+    background-color: #bd0000;
+}

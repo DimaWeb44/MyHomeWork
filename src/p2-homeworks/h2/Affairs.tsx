@@ -27,8 +27,7 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <Grid>
-            <Grid spacing={3}> {mappedAffairs} </Grid>
-            <Grid spacing={4}>
+            <Grid> {mappedAffairs} </Grid>
                 <Button color={"inherit"} variant={props.filter === "all" ? "contained" : "outlined"}
                         onClick={setAll}>All</Button>
                 <Button variant={props.filter === "high" ? "contained" : "outlined"} color={"primary"}
@@ -37,7 +36,6 @@ function Affairs(props: AffairsPropsType) {
                         onClick={setMiddle}>Middle</Button>
                 <Button variant={props.filter === "low" ? "contained" : "outlined"} color={"success"}
                         onClick={setLow}>Low</Button>
-            </Grid>
         </Grid>
 
     )

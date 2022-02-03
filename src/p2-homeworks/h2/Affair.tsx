@@ -2,6 +2,7 @@ import React from 'react'
 import {AffairType} from "./HW2";
 import {Grid, IconButton} from "@mui/material";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import s from './Affairs.module.css'
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -15,14 +16,13 @@ function Affair(props: AffairPropsType) {
     }// need to fix
 
     return (
-        <Grid container spacing={1} columns={1}>
-            <Grid style={{padding: '15px'}}>{props.affair.name}</Grid>
-            <Grid style={{padding: '15px'}}
-                  color={props.affair.priority === "high" ? "blue" : props.affair.priority === "low" ? "green" : '\n' +
+        <Grid className={s.item} container spacing={1}>
+            <Grid>{props.affair.name}</Grid>
+            <Grid color={props.affair.priority === "high" ? "blue" : props.affair.priority === "low" ? "green" : '\n' +
                       'purple'}> {props.affair.priority}</Grid>
-            <IconButton onClick={deleteCallback}>
+            <Grid><IconButton onClick={deleteCallback}>
                 <HighlightOffIcon/>
-            </IconButton>
+            </IconButton></Grid>
         </Grid>
     )
 }
