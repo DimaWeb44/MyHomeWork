@@ -1,10 +1,10 @@
 import React from 'react'
-import Error404 from "./Error404";
+import HW7 from "../../h7/HW7";
 
 function Junior() {
     return (
         <div>
-            <Error404/>
+            <HW7/>
         </div>
     )
 }

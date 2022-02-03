@@ -1,0 +1,44 @@
+/* Рисуем внешний круг радиокнопки*/
+.custom_radio {
+    position: relative; /* Родительский элемент*/
+    display: inline-block; /* Для применения рамок, размеров*/
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #464486; /* Толщина, стиль, цвет рамки*/
+    border-radius: 50%; /* Получение круга*/
+    vertical-align: text-top; /* Выравнивание кнопки по центру*/
+    margin: 0px 10px; /* Отступ между кнопкой и меткой*/
+}
+
+/* Рисуем внутренний круг */
+.custom_radio::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #464486;
+    border-radius: 50%;
+
+    /* Выравниваем по центру относительно внешнего круга */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    /* Плавный переход трансформации масштабирования */
+    transition: 0.2s ease-in;
+}
+
+.radio:checked + .custom_radio::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.radio {
+    /* Скрываем реальную радио кнопку*/
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
