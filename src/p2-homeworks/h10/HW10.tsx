@@ -9,7 +9,7 @@ function HW10() {
     // useDispatch
     const dispatch = useDispatch()
     // useSelector
-    const loading = useSelector<AppStoreType, any>(state => state.loading.loading)
+    const loading = useSelector<AppStoreType, boolean>(state => state.loading.loading)
 
 
     const setLoading = () => {
