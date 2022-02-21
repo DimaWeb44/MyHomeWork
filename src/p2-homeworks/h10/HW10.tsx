@@ -1,15 +1,26 @@
 import React from 'react'
+import {useDispatch, useSelector} from 'react-redux'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {AppStoreType} from "./bll/store";
+import {loadingAC} from "./bll/loadingReducer";
+import {CircularProgress} from "@mui/material";
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+    // useDispatch
+    const dispatch = useDispatch()
+    // useSelector
+    const loading = useSelector<AppStoreType, any>(state => state.loading.loading)
+
 
     const setLoading = () => {
         // dispatch
+        dispatch(loadingAC(true))
         // setTimeout
+        setTimeout(() => {
+            dispatch(loadingAC(false))
+        }, 2000)
         console.log('loading...')
-    };
+    }
 
     return (
         <div>
@@ -19,7 +30,7 @@ function HW10() {
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div>крутилка...</div>
+                    <div><CircularProgress color="success"/></div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
