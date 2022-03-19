@@ -60,7 +60,7 @@ const SuperDoubleRange: FC<SuperDoubleRangePropsType> = ({
     useEffect(() => {
         onChange({min: value1, max: value2});
     }, [value1, value2, onChange]);
-    if (!(value1 < value2)) setValue2(value2 + 1)
+    if (!(value1 < value2)) setValue2(value1)
     return (
         <div className="container">
             <input

@@ -1,5 +1,7 @@
 .dark {
-    background: dimgrey;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    color: aliceblue;
 }
 
 .dark-text {
@@ -7,7 +9,9 @@
 }
 
 .red {
-    background: lightcoral;
+    background-color: #d5adc8;
+    background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+    color: #260246;
 }
 
 .red-text {
@@ -15,9 +19,21 @@
 }
 
 .some {
-    background: lightgreen;
+    background-color: #7ee8fa;
+    background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+    color: #1b1846;
+
 }
 
 .some-text {
     color: darkslateblue;
+}
+
+.custom {
+    background-blend-mode: screen;
+    background:
+            linear-gradient(limegreen, transparent),
+            linear-gradient(90deg, skyblue, transparent),
+            linear-gradient(-90deg, coral, transparent);
+    color: #3f0000;
 }
