@@ -11,7 +11,7 @@ function Request() {
         RequestsAPI.postChecked(checked)
             .then(response => setInfo(JSON.stringify(response)))
             .catch(function (error) {
-                setInfo(JSON.stringify({...error}))
+                setInfo(JSON.stringify({...error.response.data}))
                 console.log({...error});
                 console.log(error.response ? error.response.data.errorText : error.message);
             })
